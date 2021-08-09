@@ -1,14 +1,14 @@
   
 const express			= require('express');
 const session			= require('express-session');
-const hbs				= require('express-handlebars');
+const hbs			= require('express-handlebars');
 const mongoose			= require('mongoose');
 const passport			= require('passport');
 const localStrategy		= require('passport-local').Strategy;
 const bcrypt			= require('bcrypt');
 const app				= express();
 
-mongoose.connect("mongodb+srv://31:31@cluster0.xxmrn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect("mongodb://localhost:3100", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
