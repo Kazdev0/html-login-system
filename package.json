@@ -1,0 +1,40 @@
+{
+  "name": "basit-html-site",
+  "version": "1.0.0",
+  "description": "Login System",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kazdev0/html-login.git"
+  },
+  "keywords": [
+    "login",
+    "html",
+    "basic",
+    "github",
+    "node",
+    "nodejs",
+    "js",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "KazDev0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kazdev0/html-login/issues"
+  },
+  "homepage": "https://github.com/Kazdev0/html-login#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "session": "^0.1.0"
+  }
+}
