@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head class="31">
+    <title>Login</title>
+<meta charset="UFT-8">
+<link rel="stylesheet" href="main.css">
+
+    </div>
+
+</head>
+
+    <body>
+  <form action="/login" method="post">
+	<div>
+		{{#if error}}
+		<p class="err-msg">Username or password is incorrect</p>
+		{{/if }}
+		<h1 class="b">Login</h1>
+	</div>
+	<div class="form-group">
+		<p class="b">Username: </p>
+		<input 
+			type="text" 
+			name="username" 
+			id="username" 
+			placeholder="Enter your username" 
+			required />
+	
+		<p class="b">Password:</p>
+		<input 
+			type="password" 
+			name="password" 
+			id="password"
+			placeholder="Enter your password" 
+			required />
+	</div>
+	<div>
+		<input class="button" type="submit" value="Login" />
+	</div>
+</form>
+    </body>
+ 
+    </html>
