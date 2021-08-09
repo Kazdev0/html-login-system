@@ -8,7 +8,7 @@ const localStrategy		= require('passport-local').Strategy;
 const bcrypt			= require('bcrypt');
 const app				= express();
 
-mongoose.connect("mongodb://localhost:3100", {
+mongoose.connect("mongodb://localhost:3100", {//you mongodb url
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
