@@ -1,12 +1,12 @@
   
-const express			= require('express');
-const session			= require('express-session');
-const hbs			= require('express-handlebars');
-const mongoose			= require('mongoose');
-const passport			= require('passport');
-const localStrategy		= require('passport-local').Strategy;
-const bcrypt			= require('bcrypt');
-const app				= express();
+const express = require('express');
+const session = require('express-session');
+const hbs = require('express-handlebars');
+const mongoose = require('mongoose');
+const passport = require('passport');
+const localStrategy = require('passport-local').Strategy;
+const bcrypt = require('bcrypt');
+const app = express();
 
 mongoose.connect("mongodb://localhost:3100", {//you mongodb url
 	useNewUrlParser: true,
@@ -27,7 +27,6 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model('User', UserSchema);
 
 
-// Middleware
 app.engine('hbs', hbs({ extname: '.hbs' }));
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
@@ -39,7 +38,6 @@ app.use(session({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// Passport.js
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -77,13 +75,8 @@ function isLoggedOut(req, res, next) {
 	res.redirect('/');
 }
 
-// ROUTES
 app.get('/', isLoggedIn, (req, res) => {
 	res.render("index", { title: "Home" });
-});
-
-app.get('/about', (req, res) => {
-	res.render("index", { title: "About" });
 });
 
 app.get('/login', isLoggedOut, (req, res) => {
@@ -104,8 +97,6 @@ app.get('/logout', function (req, res) {
 	req.logout();
 	res.redirect('/');
 });
-
-// Setup our admin user
 app.get('/setup', async (req, res) => {
 	const exists = await User.exists({ username: "admin" });
 
@@ -131,6 +122,6 @@ app.get('/setup', async (req, res) => {
 	});
 });
 
-app.listen(3000, () => {
-	console.log("Listening on port 3000");
+app.listen(3131, () => {
+	console.log("Listening on port 3131");
 });
