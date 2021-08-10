@@ -1,5 +1,10 @@
 
 # Çalana Hakkımız Helal Değildir
+
+Sisteme Çok Uğraşmadım 
+localhost:3131/setup yazarak 
+admin - pass şifresini Oluşturabilirsiniz
+
 # ⭐ 10 Star 
 -----
 # Videos & Photos 
